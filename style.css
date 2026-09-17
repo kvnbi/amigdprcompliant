@@ -23,6 +23,16 @@ h1 {
   text-align: center;
 }
 
+.subtext {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #555;
+  text-align: center;
+  max-width: 480px;
+  margin-top: -16px;
+}
+
 h2 {
   font-family: 'Inter', sans-serif;
   font-weight: 600;
