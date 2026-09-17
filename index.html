@@ -10,11 +10,131 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>Am I GDPR Compliant?</h1>
-<p class="subtext">Find out if you are GDPR-compliant with our GDPR-compliant quiz and guide.</p>
-<h2>What is GDPR?</h2>
-<div class="box">
-  <p>The EU general data protection regulation (GDPR) is the strongest privacy and security law in the world.</p>
-</div>
+<main>
+<section class="hero">
+  <h1>Am I GDPR Compliant?</h1>
+  <p class="subtext">Find out if you are GDPR-compliant with our GDPR-compliant quiz and guide.</p>
+</section>
+
+<section class="section">
+  <h2 class="section-label">What is GDPR?</h2>
+  <div class="box">
+    <p>The EU general data protection regulation (GDPR) is the strongest privacy and security law in the world.</p>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="section-label">Take the quiz</h2>
+  <div class="quiz-shell">
+  <div class="quiz-viewport">
+    <p class="quiz-progress" id="quiz-progress"></p>
+    <div class="quiz-track" id="quiz-track">
+
+      <div class="slide" id="slide-intro">
+        <p class="slide-text">What should we call your product, company, or service?</p>
+        <input type="text" id="product-name" placeholder="e.g. Acme, Acme SaaS, Acme App">
+      </div>
+
+      <div class="slide" data-weight="1">
+        <p class="slide-text">If <span class="fill-name">your product</span> had a personal data breach today, could you notify the relevant authority within 72 hours?</p>
+        <label><input type="radio" name="q0" value="1"><span>Yes</span></label>
+        <label><input type="radio" name="q0" value="0.5"><span>Not sure</span></label>
+        <label><input type="radio" name="q0" value="0"><span>No</span></label>
+        <p class="note">Article 33 requires notification without undue delay and, where feasible, not later than 72 hours after becoming aware of the breach.</p>
+      </div>
+
+      <div class="slide" data-weight="1">
+        <p class="slide-text">Do you know, in writing, what personal data <span class="fill-name">your product</span> collects and why?</p>
+        <label><input type="radio" name="q1" value="1"><span>Yes</span></label>
+        <label><input type="radio" name="q1" value="0.5"><span>Not sure</span></label>
+        <label><input type="radio" name="q1" value="0"><span>No</span></label>
+        <p class="note">Article 30 requires most organizations to keep records of processing, with a narrow exemption for smaller ones doing only occasional, low risk processing.</p>
+      </div>
+
+      <div class="slide" data-weight="1">
+        <p class="slide-text">If <span class="fill-name">your product</span> does large scale monitoring or handles large amounts of sensitive data, have you appointed a Data Protection Officer?</p>
+        <label><input type="radio" name="q2" value="1"><span>Yes</span></label>
+        <label><input type="radio" name="q2" value="0.5"><span>Not applicable to us</span></label>
+        <label><input type="radio" name="q2" value="0"><span>No</span></label>
+        <p class="note">Article 37 requires a DPO for public authorities and for organizations whose core activities involve large scale monitoring or large scale processing of sensitive data.</p>
+      </div>
+
+      <div class="slide" data-weight="1">
+        <p class="slide-text">If someone under 16 could sign up for <span class="fill-name">your product</span>, do you verify age or get parental consent?</p>
+        <label><input type="radio" name="q3" value="1"><span>Yes</span></label>
+        <label><input type="radio" name="q3" value="0.5"><span>Not applicable to us</span></label>
+        <label><input type="radio" name="q3" value="0"><span>No</span></label>
+        <p class="note">Article 8 sets the default age at 16, though member states can lower it, not below 13.</p>
+      </div>
+
+      <div class="slide" data-weight="1">
+        <p class="slide-text">For every way <span class="fill-name">your product</span> uses personal data, do you know which lawful basis you're relying on, like consent or contract?</p>
+        <label><input type="radio" name="q4" value="1"><span>Yes</span></label>
+        <label><input type="radio" name="q4" value="0.5"><span>Not sure</span></label>
+        <label><input type="radio" name="q4" value="0"><span>No</span></label>
+        <p class="note">Article 6 requires a lawful basis, such as consent, contract, or legitimate interests, for every kind of processing.</p>
+      </div>
+
+      <div class="slide" data-weight="1">
+        <p class="slide-text">If a user asked for their data from <span class="fill-name">your product</span> in a portable file, could you actually produce it?</p>
+        <label><input type="radio" name="q5" value="1"><span>Yes</span></label>
+        <label><input type="radio" name="q5" value="0.5"><span>Not sure</span></label>
+        <label><input type="radio" name="q5" value="0"><span>No</span></label>
+        <p class="note">Article 20 gives this right when processing is based on consent or contract and carried out by automated means.</p>
+      </div>
+
+      <div class="slide" data-weight="1">
+        <p class="slide-text">If someone asked <span class="fill-name">your product</span> to delete their data, could you actually do it?</p>
+        <label><input type="radio" name="q6" value="1"><span>Yes</span></label>
+        <label><input type="radio" name="q6" value="0.5"><span>Not sure</span></label>
+        <label><input type="radio" name="q6" value="0"><span>No</span></label>
+        <p class="note">Article 17 requires erasure on specific grounds, with narrow exceptions like legal claims or freedom of expression.</p>
+      </div>
+
+      <div class="slide" data-weight="1">
+        <p class="slide-text">Does <span class="fill-name">your product</span> only collect the personal data it actually needs, and delete it once it's no longer needed?</p>
+        <label><input type="radio" name="q7" value="1"><span>Yes</span></label>
+        <label><input type="radio" name="q7" value="0.5"><span>Not sure</span></label>
+        <label><input type="radio" name="q7" value="0"><span>No</span></label>
+        <p class="note">Article 5 requires data minimisation and storage limitation, meaning only what's necessary, kept only as long as necessary.</p>
+      </div>
+
+      <div class="slide" data-weight="1">
+        <p class="slide-text">Does <span class="fill-name">your product</span> have reasonable technical measures in place, like encryption or access controls, to protect personal data?</p>
+        <label><input type="radio" name="q8" value="1"><span>Yes</span></label>
+        <label><input type="radio" name="q8" value="0.5"><span>Not sure</span></label>
+        <label><input type="radio" name="q8" value="0"><span>No</span></label>
+        <p class="note">Article 32 requires appropriate technical and organizational security, including things like encryption and the ability to restore access after an incident.</p>
+      </div>
+
+      <div class="slide" data-weight="1">
+        <p class="slide-text">If <span class="fill-name">your product</span> is based outside the EU, do you still apply these rules to visitors, users, or customers in the EU?</p>
+        <label><input type="radio" name="q9" value="1"><span>Yes</span></label>
+        <label><input type="radio" name="q9" value="0.5"><span>Not applicable to us</span></label>
+        <label><input type="radio" name="q9" value="0"><span>No</span></label>
+        <p class="note">Article 3 extends GDPR to non-EU companies that offer goods or services to, or monitor the behavior of, people in the EU.</p>
+      </div>
+
+      <div class="slide" id="slide-result">
+        <p class="result-score" id="result-score"></p>
+        <p class="result-text" id="result-text"></p>
+        <button type="button" id="retake">Start over</button>
+      </div>
+
+    </div>
+  </div>
+  <div class="quiz-nav">
+    <button type="button" id="back" disabled>Back</button>
+    <button type="button" id="next">Next</button>
+  </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <p>Not legal advice.</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
