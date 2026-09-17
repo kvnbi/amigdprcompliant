@@ -24,6 +24,10 @@ main {
   gap: 64px;
 }
 
+a {
+  color: #000;
+}
+
 .hero {
   display: flex;
   flex-direction: column;
@@ -36,6 +40,11 @@ h1 {
   font-weight: 600;
   font-size: clamp(1.6rem, 5vw, 2.75rem);
   line-height: 1.15;
+}
+
+h1 a {
+  color: inherit;
+  text-decoration: none;
 }
 
 .subtext {
@@ -69,6 +78,10 @@ h1 {
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.6;
+}
+
+.box p + p {
+  margin-top: 16px;
 }
 
 .quiz-shell {
@@ -218,13 +231,41 @@ h1 {
 .site-footer {
   width: 100%;
   border-top: 1px solid #eaeaea;
-  padding: 32px 24px;
+  padding: 20px 24px;
 }
 
-.site-footer p {
-  max-width: 640px;
-  margin: 0 auto;
-  text-align: center;
+.footer-inner {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.footer-left p {
   font-size: 0.85rem;
   color: #555;
+}
+
+.copyright {
+  color: #999;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer-links a {
+  color: #555;
+  font-size: 0.85rem;
 }
